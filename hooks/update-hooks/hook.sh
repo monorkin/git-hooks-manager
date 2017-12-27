@@ -1,1 +1,0 @@
-/Users/stanko/.git-templates/hooks/hook.sh
