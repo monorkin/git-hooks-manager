@@ -40,7 +40,7 @@ for hook in $HOOKS
 do
   hook_path=$INSTALL_DIR/hooks/$hook
 
-  if [ -f "$hook_path" ]; then
+  if [ ! -f "$hook_path" ]; then
     echo "Creating link for '$hook' hook"
     ln -s $BASE_HOOK_PATH $hook_path
   else
