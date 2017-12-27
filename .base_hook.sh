@@ -31,13 +31,13 @@ EXIT_CODES="0"
 
 for file in $GLOBAL_HOOKS
 do
-  sh "$GLOBAL_HOOKS_DIR/$file"
+  sh "$GLOBAL_HOOKS_DIR/$file" $@
   EXIT_CODES="$EXIT_CODES | $?"
 done
 
 for file in $LOCAL_HOOKS
 do
-  sh "$LOCAL_HOOKS_DIR/$file"
+  sh "$LOCAL_HOOKS_DIR/$file" $@
   EXIT_CODES="$EXIT_CODES | $?"
 done
 
