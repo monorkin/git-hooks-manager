@@ -1,6 +1,7 @@
+# Ignore local hooks
 /hooks/*-hooks/*
 !/hooks/*-hooks/.keep
 
-
+# Ignore global hooks
 /.global-hooks/*-hooks/*
 !/.global-hooks/*-hooks/.keep
