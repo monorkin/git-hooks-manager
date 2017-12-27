@@ -1,0 +1,6 @@
+/hooks/*-hooks/*
+!/hooks/*-hooks/.keep
+
+
+/.global-hooks/*-hooks/*
+!/.global-hooks/*-hooks/.keep
