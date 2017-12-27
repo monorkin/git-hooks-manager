@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
+FILE_PATH="$(dirname $0)"
 FILE_NAME="$(basename $0)"
 HOOK_DIR="$FILE_NAME-hooks"
 
 BASE_DIR="$HOME/.git-templates"
 
 GLOBAL_HOOKS_DIR="$BASE_DIR/.global-hooks/$HOOK_DIR"
-LOCAL_HOOKS_DIR="$PWD/hooks/$HOOK_DIR"
+LOCAL_HOOKS_DIR="$FILE_PATH/$HOOK_DIR"
 
 LOCAL_HOOKS="$(ls -A $LOCAL_HOOKS_DIR)"
 GLOBAL_HOOKS="$(ls -A $GLOBAL_HOOKS_DIR)"

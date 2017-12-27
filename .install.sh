@@ -51,16 +51,5 @@ do
 done
 
 # Configurte GIT
-if [ ! -f "$GITCONFIG_PATH" ]; then
-  echo "Creating GitConfig at '$GITCONFIG_PATH'"
-  touch $GITCONFIG_PATH
-fi
-
-if [ ! -z "$(cat $GITCONFIG_PATH | grep -Ei "templatedir\s*=")" ]; then
-  echo "WARNING: The 'init.templatedir' option is already set in your GitConfig"
-  echo "         file (here '$GITCONFIG_PATH')."
-  echo "         Please change it's value to '$INSTALL_DIR'."
-else
-  echo "Appending template dir config to GitConfig"
-  echo "[init]\n  templatedir = $INSTALL_DIR" >> $GITCONFIG_PATH
-fi
+echo "Setting template directory to '$INSTALL_DIR'"
+git config --global init.templatedir $INSTALL_DIR
